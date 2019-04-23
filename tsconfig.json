@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["es6"],
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "strict": true,
+    "removeComments": true,
+    "noEmit": false,
+    "pretty": true,
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "rootDir": ".",
+    "typeRoots": ["./node_modules/@types", "./src/@types/*"],
+    "baseUrl": ".",
+    "paths": {
+      "zeropipe/*": ["./src/*"]
+    }
+  }
+}

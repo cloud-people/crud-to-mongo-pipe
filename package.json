@@ -1,0 +1,39 @@
+{
+  "name": "@cloudpeople/crud-to-mongo-pipe",
+  "version": "0.0.1",
+  "description": "pipe which transfers crud actions to mongo query actions.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "tslint -t codeFrame --fix --project tsconfig.json",
+    "clear": "rimraf ./dist",
+    "compile": "tsc --traceResolution",
+    "build": "npm run clear && npm run compile",
+    "prepublishOnly": "npm run build",
+    "madge": "npx madge --circular --extensions ts ./src/",
+    "test": "node --inspect -r ts-node/register ./test/index.ts",
+    "doc": "typedoc --out docs --name 'Zeropipe'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloud-people/ts-template.git"
+  },
+  "author": "Heropa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cloud-people/ts-template/issues"
+  },
+  "homepage": "https://github.com/cloud-people/ts-template#readme",
+  "devDependencies": {
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.14.0",
+    "typedoc": "^0.14.2",
+    "typedoc-plugin-external-module-name": "^2.0.0"
+  },
+  "dependencies": {
+    "@types/node": "^11.9.5",
+    "ts-invariant": "^0.4.0",
+    "typescript": "^3.4.3"
+  }
+}
